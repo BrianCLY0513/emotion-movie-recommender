@@ -89,3 +89,19 @@ if st.button("Recommend Movies"):
         poster = fetch_poster(movie)
         details = get_movie_details(movie)
 
+        with cols[i % 5]:
+
+            if poster:
+                st.image(poster)
+            else:
+                st.image("https://via.placeholder.com/200x300?text=No+Image+Available")
+                st.caption("🎬 Poster not available")
+
+            st.caption(movie)
+
+            if details["rating"] != "N/A":
+                st.caption(f"⭐ {details['rating']}")
+            else:
+                st.caption("⭐ No rating available")
+
+            st.caption(f"🎭 {details['genres']}")
