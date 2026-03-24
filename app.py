@@ -1,5 +1,11 @@
 import streamlit as st
-from recommender import recommend_movies, movies, get_popular_movies, get_movie_details
+from recommender import (
+    recommend_movies,
+    recommend_movies_cb,
+    movies,
+    get_popular_movies,
+    get_movie_details
+)
 from poster import fetch_poster
 
 st.set_page_config(page_title="Emotion Movie Recommender", layout="wide")
